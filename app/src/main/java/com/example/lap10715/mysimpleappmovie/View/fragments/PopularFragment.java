@@ -76,4 +76,9 @@ public class PopularFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        presenter.detach();
+    }
 }

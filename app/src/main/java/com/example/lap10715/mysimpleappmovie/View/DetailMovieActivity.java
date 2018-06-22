@@ -54,6 +54,7 @@ public class DetailMovieActivity extends AppCompatActivity implements IView {
             component.inject(this);
 
             presenter.attach(this);
+
             presenter.loadDetail(id);
         }
 
@@ -92,5 +93,11 @@ public class DetailMovieActivity extends AppCompatActivity implements IView {
     @Override
     public void notifyError() {
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        presenter.detach();
     }
 }

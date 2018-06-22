@@ -61,10 +61,6 @@ public class MoviePresenter implements IPresenter {
 
     @Override
     public void detach() {
-        if(view != null){
-            view = null;
-        }
+        view = null;
     }
-
-
 }

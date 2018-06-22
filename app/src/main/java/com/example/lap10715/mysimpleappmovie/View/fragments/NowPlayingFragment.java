@@ -76,4 +76,10 @@ public class NowPlayingFragment extends Fragment{
             EventBus.getDefault().post(event);
         }
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        presenter.detach();
+    }
 }
